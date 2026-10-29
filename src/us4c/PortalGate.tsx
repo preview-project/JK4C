@@ -74,7 +74,7 @@ export default function PortalGate({
       <div className="portal-top">
         <div>
           <Shield size={22} />
-          <strong>R4C</strong>
+          <strong>JK4C</strong>
           <span>Cyber command & control</span>
         </div>
         <span>
@@ -89,7 +89,7 @@ export default function PortalGate({
             <div className="portal-emblem-ring" />
           </div>
           <span className="eyebrow">UNIFIED CYBER OPERATIONS</span>
-          <h1>R4C</h1>
+          <h1>JK4C</h1>
           <p className="portal-subtitle">Integrated Cyber Command & Control</p>
           <p className="portal-description">
             Complaint monitoring, intelligence fusion, investigation and
@@ -128,7 +128,7 @@ export default function PortalGate({
           </div>
         </section>
         <section className="portal-access-card">
-          <span className="eyebrow">R4C PORTAL ACCESS</span>
+          <span className="eyebrow">JK4C PORTAL ACCESS</span>
           {phase === "launch" ? (
             <>
               <h2>Enter the command centre</h2>
@@ -263,8 +263,8 @@ export default function PortalGate({
               </h2>
               <p>
                 {mode === "demo"
-                  ? "Enter the populated R4C training workspace."
-                  : "Authenticate to access your private R4C case workspace."}
+                  ? "Enter the populated JK4C training workspace."
+                  : "Authenticate to access your private JK4C case workspace."}
               </p>
               <form
                 key={mode}
@@ -274,13 +274,13 @@ export default function PortalGate({
                   const form = new FormData(e.currentTarget);
                   if (mode === "demo") {
                     if (
-                      String(form.get("username")).trim() === "r4c.operator" &&
+                      String(form.get("username")).trim() === "JK4C.operator" &&
                       String(form.get("password")) === "gildemo"
                     )
                       onEnter();
                     else
                       setError(
-                        "Enter the demo username R4C.operator and password gildemo.",
+                        "Enter the demo username JK4C.operator and password gildemo.",
                       );
                     return;
                   }
@@ -321,12 +321,12 @@ export default function PortalGate({
                     <input
                       name={mode === "demo" ? "username" : "email"}
                       type={mode === "demo" ? "text" : "email"}
-                      defaultValue={mode === "demo" ? "r4c.operator" : ""}
+                      defaultValue={mode === "demo" ? "JK4C.operator" : ""}
                       required
                       autoComplete={mode === "demo" ? "username" : "email"}
                       placeholder={
                         mode === "demo"
-                          ? "r4c.operator"
+                          ? "JK4C.operator"
                           : "operator@organisation.gov.in…"
                       }
                     />
@@ -360,14 +360,14 @@ export default function PortalGate({
                     : mode === "demo"
                       ? "Sign in to demo"
                       : mode === "signin"
-                        ? "Sign in to R4C"
+                        ? "Sign in to JK4C"
                         : "Create account"}
                   <ArrowRight size={15} />
                 </button>
               </form>
               {mode === "demo" ? (
                 <small className="portal-demo-credentials">
-                  Demo access: R4C.operator · gildemo. Changes stay in this
+                  Demo access: JK4C.operator · gildemo. Changes stay in this
                   browser.
                 </small>
               ) : null}
@@ -432,7 +432,7 @@ export default function PortalGate({
         </section>
       </div>
       <div className="portal-footer">
-        <span>R4C · Unified Cyber Command & Control</span>
+        <span>JK4C · Unified Cyber Command & Control</span>
         <span>Intelligence · Investigation · Response</span>
       </div>
     </div>
