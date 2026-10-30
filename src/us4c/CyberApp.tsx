@@ -958,7 +958,7 @@ function Intake({ save, saving, user }: Workspace) {
               name="location"
               required
               maxLength={100}
-              placeholder="e.g. Lucknow"
+              placeholder="e.g. Jammu"
             />
           </label>
           <label>

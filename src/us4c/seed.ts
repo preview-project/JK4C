@@ -11,7 +11,7 @@ function incident(
   return {
     priority: "High",
     stage: 0,
-    location: "Lucknow",
+    location: "Jammu",
     source: "Citizen portal",
     unit: units[input.mission],
     createdAt: "2026-10-01T04:42:00.000Z",
@@ -30,7 +30,7 @@ function incident(
 // Fictional, masked training casework. The workspace banner identifies the exercise environment once.
 export const operationalCases: Case[] = [
   incident({
-    id: "R4C-2026-1042",
+    id: "JK4C-2026-1042",
     title: "Merchant impersonation · UPI fund diversion",
     mission: "fraud",
     priority: "Critical",
@@ -128,11 +128,11 @@ export const operationalCases: Case[] = [
       "₹38,500 hold recorded; ₹11,500 and downstream funds require reconciliation.",
   }),
   incident({
-    id: "R4C-2026-1041",
+    id: "JK4C-2026-1041",
     title: "Account impersonation · repeated threats and address disclosure",
     mission: "safety",
     priority: "Critical",
-    location: "Kanpur",
+    location: "Anantnag",
     summary:
       "The complainant reports threatening messages between 21:14 yesterday and 09:46 today from @northlane.help and @northlane.support. One message includes a residential-area reference. Preserve the message chain, keep the victim identity restricted, and review immediate protection before attempting identity linkage.",
     entities: [
@@ -213,10 +213,10 @@ export const operationalCases: Case[] = [
       "Protection review pending; account attribution remains unconfirmed.",
   }),
   incident({
-    id: "R4C-2026-1040",
+    id: "JK4C-2026-1040",
     title: "Reposted video · disputed location and event context",
     mission: "content",
-    location: "Varanasi",
+    location: "Baramulla",
     source: "Threat intelligence referral",
     summary:
       "A 01:42 Hindi video is circulating with a caption claiming a current local incident. The archive contains an earlier upload at 17:18 yesterday. Review key frames, transcript and original-post context before classifying the claim. Six archived posts are grouped into three publisher clusters.",
@@ -238,7 +238,7 @@ export const operationalCases: Case[] = [
       },
       {
         label: "Claimed location",
-        value: "Varanasi",
+        value: "Baramulla",
         confidence: "Caption claim; unverified",
       },
     ],
@@ -308,11 +308,11 @@ export const operationalCases: Case[] = [
       "Context verification open; platform action has not been authorised.",
   }),
   incident({
-    id: "R4C-2026-1039",
+    id: "JK4C-2026-1039",
     title: "Urgent welfare concern · contact and location confirmation",
     mission: "distress",
     priority: "Critical",
-    location: "Prayagraj",
+    location: "Kathua",
     source: "Family referral",
     summary:
       "A family member reports an immediate welfare concern after a message received at 09:41 IST. The last known landmark is the riverfront access road near Sector 4. Confirm the contact and operational location, record supervisor review, and coordinate patrol and medical resources without delaying urgent protection for identity fusion.",
@@ -393,10 +393,10 @@ export const operationalCases: Case[] = [
     outcome: "Welfare contact and verified response location pending.",
   }),
   incident({
-    id: "R4C-2026-1038",
+    id: "JK4C-2026-1038",
     title: "Courier impersonation · remote-access payment request",
     mission: "fraud",
-    location: "Jaipur",
+    location: "Srinagar",
     source: "1930 helpline",
     amount: 18750,
     frozen: 12300,
@@ -452,7 +452,7 @@ export const operationalCases: Case[] = [
       "₹12,300 hold recorded; ₹6,450 beneficiary reconciliation pending.",
   }),
   incident({
-    id: "R4C-2026-1037",
+    id: "JK4C-2026-1037",
     title: "Impersonation profile · evidence preserved and protection handover",
     mission: "safety",
     priority: "Medium",
@@ -499,7 +499,7 @@ export const operationalCases: Case[] = [
       "Safe outreach completed; jurisdiction officer accepted handover. Follow-up: Protection Desk, 02 Oct 11:00 IST.",
   }),
   incident({
-    id: "R4C-2026-1036",
+    id: "JK4C-2026-1036",
     title: "False evacuation notice · source review and public advisory",
     mission: "content",
     priority: "Medium",
@@ -544,7 +544,7 @@ export const operationalCases: Case[] = [
       "Outdated context confirmed; clarification advisory approved. Follow-up: Intelligence Hub, monitor new reposts through 02 Oct.",
   }),
   incident({
-    id: "R4C-2026-1035",
+    id: "JK4C-2026-1035",
     title: "Welfare referral · contact established and support handover",
     mission: "distress",
     priority: "High",

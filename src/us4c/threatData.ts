@@ -38,11 +38,11 @@ export const riskRegister: {
 
 // Complaints per lakh population.
 export const cityHotspots = [
-  { city: "Jaipur", rate: 57.3 },
-  { city: "Udaipur", rate: 45.5 },
-  { city: "Kota", rate: 31.9 },
-  { city: "Alwar", rate: 30.9 },
-  { city: "Jodhpur", rate: 28.4 },
+  { city: "Srinagar", rate: 57.3 },
+  { city: "Jammu", rate: 45.5 },
+  { city: "Anantnag", rate: 31.9 },
+  { city: "Baramulla", rate: 30.9 },
+  { city: "Kathua", rate: 28.4 },
 ];
 
 // Share of registered complaints, %.
@@ -72,39 +72,26 @@ export const victimAges = [
 
 // Registered complaints per district.
 export const districtActivity: Record<string, number> = {
-  Jaipur: 2140,
-  Alwar: 980,
-  Jodhpur: 910,
-  Udaipur: 870,
-  Kota: 760,
-  Bharatpur: 720,
-  Ajmer: 640,
-  Bikaner: 430,
-  Sikar: 410,
-  Jhunjhunu: 380,
-  Bhilwara: 360,
-  Ganganagar: 340,
-  Nagaur: 330,
-  Dausa: 310,
-  Pali: 290,
-  Tonk: 270,
-  Chittorgarh: 260,
-  "Sawai Madhopur": 250,
-  Banswara: 240,
-  Hanumangarh: 190,
-  Churu: 180,
-  Barmer: 170,
-  Karauli: 160,
-  Dholpur: 150,
-  Jhalawar: 140,
-  Bundi: 130,
-  Jalore: 120,
-  Rajsamand: 110,
-  Sirohi: 100,
-  Baran: 95,
-  Dungarpur: 90,
-  Pratapgarh: 70,
-  Jaisalmer: 60,
+  Srinagar: 2140,
+  Jammu: 1980,
+  Anantnag: 760,
+  Baramulla: 720,
+  Kathua: 640,
+  Budgam: 430,
+  Udhampur: 410,
+  Pulwama: 380,
+  Rajouri: 340,
+  Samba: 310,
+  Kupwara: 290,
+  Ganderbal: 250,
+  Kulgam: 220,
+  Poonch: 190,
+  Bandipora: 170,
+  Doda: 150,
+  Reasi: 130,
+  Shopian: 120,
+  Ramban: 100,
+  Kishtwar: 80,
 };
 
 export const hotspotLevel = (count: number): HotspotLevel =>
@@ -119,7 +106,7 @@ export const keyFindings = [
   {
     title: "Regional gaps in digital literacy",
     detail:
-      "Western and southern districts report fewer complaints despite comparable exposure to fraud.",
+      "Hill and border districts such as Kishtwar, Ramban and Poonch report fewer complaints despite comparable exposure to fraud.",
   },
   {
     title: "Young adults most targeted",

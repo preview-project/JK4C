@@ -39,7 +39,7 @@ const feedRecords: FeedRecord[] = [
     source: "Public-post archive",
     author: "@cityupdates.local",
     time: "10:21 IST",
-    location: "Varanasi",
+    location: "Baramulla",
     title: "Video repost with disputed location",
     text: "“This happened near the east market this morning.” The attached 01:42 video repeats frames from an earlier upload. Three reposts use the same caption; the recording date and location need analyst verification.",
     mission: "content",
@@ -59,7 +59,7 @@ const feedRecords: FeedRecord[] = [
     source: "Helpline intake",
     author: "Call reference 1930/1001/028",
     time: "10:18 IST",
-    location: "Jaipur",
+    location: "Srinagar",
     title: "Courier clearance call followed by two debits",
     text: "Caller reports a remote-access installation request and two payments totalling ₹18,750. Payment screenshots were submitted during the call. The second beneficiary identifier remains unreadable and requires clarification.",
     mission: "fraud",
@@ -88,7 +88,7 @@ const feedRecords: FeedRecord[] = [
     source: "Citizen-reported account archive",
     author: "@northlane.support",
     time: "10:15 IST",
-    location: "Kanpur",
+    location: "Anantnag",
     title: "Repeated contact and residential-area reference",
     text: "An account using the complainant’s photograph sent repeated messages after being blocked. The last message references the residential area. The reporter requests contact only through the assigned protection officer.",
     mission: "safety",
@@ -104,7 +104,7 @@ const feedRecords: FeedRecord[] = [
     source: "Nodal response register",
     author: "Beneficiary institution · nodal desk",
     time: "10:14 IST",
-    location: "Lucknow",
+    location: "Jammu",
     title: "Hold acknowledgement received · ₹38,500",
     text: "Acknowledgement ACK/FI/1042/02 records ₹38,500 on hold against the beneficiary account ending 4821. Two onward transfers require reconciliation. The response names Aarav Enterprises Services; the receipt uses Aarav Enterprises.",
     mission: "fraud",
@@ -134,7 +134,7 @@ const feedRecords: FeedRecord[] = [
     source: "Welfare coordination register",
     author: "Family referral · R-1039",
     time: "09:48 IST",
-    location: "Prayagraj",
+    location: "Kathua",
     title: "Immediate welfare concern · last-known landmark",
     text: "A family member reports a concerning message at 09:41. Last-known location is the riverfront access road near Sector 4. Phone contact and location remain unconfirmed. A supervisor review and urgent contact attempt are required.",
     mission: "distress",
@@ -164,7 +164,7 @@ const feedRecords: FeedRecord[] = [
     source: "Authorised response import",
     author: "Telecom liaison register",
     time: "09:29 IST",
-    location: "Lucknow",
+    location: "Jammu",
     title: "Subscriber response · caller-number enquiry",
     text: "A documented response to enquiry TEL/1042/01 has been entered for the caller identifier ending 1904. Review the request reference, observation period and authorised scope before attaching subscriber details to the canonical profile.",
     mission: "fraud",
@@ -281,7 +281,7 @@ export default function IntelligenceIntake({
     if (!item) return;
     setError("");
     const mission = missions.find((m) => m.id === item.mission)!;
-    const id = `R4C-INT-${item.id}`;
+    const id = `JK4C-INT-${item.id}`;
     const next: Case = {
       id,
       title: item.title,
@@ -349,7 +349,7 @@ export default function IntelligenceIntake({
     <>
       <div className="page-intro">
         <div>
-          <span className="eyebrow">R4C / SHARED INTELLIGENCE</span>
+          <span className="eyebrow">JK4C / SHARED INTELLIGENCE</span>
           <h1>Sources & data intake</h1>
           <p>
             Source review, complaint triage, evidence extraction and case

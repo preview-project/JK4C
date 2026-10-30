@@ -29,7 +29,7 @@ import {
   Target,
   Users,
 } from "lucide-react";
-import { rajasthanDistricts, rajasthanViewBox } from "./rajasthanMap";
+import { jkDistricts, jkViewBox } from "./jkMap";
 import {
   caseTrend,
   cityHotspots,
@@ -51,7 +51,8 @@ const levelFill = { High: "#86b6ef", Moderate: "#3987e5", Low: "#184f95" };
 const trendIcons = [BrainCircuit, Link2, Layers, Cloud];
 const findingIcons = [HandCoins, GraduationCap, Users];
 const focusIcons = [Target, HandCoins, Megaphone];
-const mapLabels = ["Jaipur", "Jodhpur", "Udaipur", "Kota", "Bikaner", "Alwar", "Ajmer"];
+const noDataFill = "#2a3a50";
+const mapLabels = ["Srinagar", "Jammu", "Anantnag", "Baramulla", "Kathua", "Rajouri", "Udhampur"];
 
 const axisTick = { fill: "#a7b6cc", fontSize: 11 };
 const tooltipProps = {
@@ -138,24 +139,27 @@ function Donut({
 
 function DistrictMap() {
   const [active, setActive] = useState<string | null>(null);
-  const count = active ? districtActivity[active] ?? 0 : 0;
+  const count = active ? districtActivity[active] : undefined;
   return (
     <div className="district-map">
       <svg
-        viewBox={rajasthanViewBox}
+        viewBox={jkViewBox}
         role="group"
-        aria-label="Rajasthan districts by cybercrime activity level"
+        aria-label="Jammu & Kashmir districts by cybercrime activity level"
       >
-        {rajasthanDistricts.map((d) => {
-          const level = hotspotLevel(districtActivity[d.name] ?? 0);
+        {jkDistricts.map((d) => {
+          const n = districtActivity[d.name];
+          const level = n === undefined ? null : hotspotLevel(n);
           return (
             <path
               key={d.name}
               d={d.d}
-              fill={levelFill[level]}
+              fill={level ? levelFill[level] : noDataFill}
               className={active === d.name ? "active" : ""}
               tabIndex={0}
-              aria-label={`${d.name}: ${level} activity, ${fmt(districtActivity[d.name] ?? 0)} complaints`}
+              aria-label={
+                level ? `${d.name}: ${level} activity, ${fmt(n)} complaints` : `${d.name}: no data`
+              }
               onMouseEnter={() => setActive(d.name)}
               onMouseLeave={() => setActive(null)}
               onFocus={() => setActive(d.name)}
@@ -163,7 +167,7 @@ function DistrictMap() {
             />
           );
         })}
-        {rajasthanDistricts
+        {jkDistricts
           .filter((d) => mapLabels.includes(d.name))
           .map((d) => (
             <text key={d.name} x={d.cx} y={d.cy} aria-hidden="true">
@@ -176,7 +180,9 @@ function DistrictMap() {
           <>
             <strong>{active}</strong>
             <span>
-              {hotspotLevel(count)} activity · {fmt(count)} complaints
+              {count === undefined
+                ? "No data"
+                : `${hotspotLevel(count)} activity · ${fmt(count)} complaints`}
             </span>
           </>
         ) : (
@@ -200,7 +206,7 @@ export default function ThreatOverview() {
     <section className="threat-overview" aria-labelledby="threat-overview-title">
       <header className="threat-overview-head">
         <div>
-          <span className="eyebrow">THREAT LANDSCAPE / RAJASTHAN</span>
+          <span className="eyebrow">THREAT LANDSCAPE / JAMMU & KASHMIR</span>
           <h2 id="threat-overview-title">Threat & cybercrime trends</h2>
         </div>
         <span className="illustrative-badge">

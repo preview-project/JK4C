@@ -110,7 +110,7 @@ describe("US4C chatbot trust boundary", () => {
     const r = await worker.fetch(
       request({
         messages: [{ role: "user", content: "Summarise" }],
-        caseId: "R4C-2026-1042",
+        caseId: "JK4C-2026-1042",
       }),
       env,
     );

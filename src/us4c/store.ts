@@ -4,7 +4,7 @@ import { seedCases } from "./data";
 const url = import.meta.env.VITE_US4C_SUPABASE_URL;
 const key = import.meta.env.VITE_US4C_SUPABASE_KEY;
 export const database = url && key ? createClient(url, key) : null;
-const storageKey = "us4c-training-v2";
+const storageKey = "us4c-training-v4";
 export function loadDemo(): Case[] {
   try {
     const cached = JSON.parse(localStorage.getItem(storageKey) || "null");
@@ -58,7 +58,7 @@ export async function loadRemote(owner: string) {
     .order("created_at", { ascending: false });
   if (error)
     throw new Error(
-      "Database unavailable. Check the R4C schema and connection settings.",
+      "Database unavailable. Check the JK4C schema and connection settings.",
     );
   return data.map(fromRow);
 }
